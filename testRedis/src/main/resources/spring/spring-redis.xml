@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建redis的链接配置-->
+
+    <bean class="org.springframework.data.redis.connection.RedisStandaloneConfiguration" id="standaloneConfiguration">
+        <property name="hostName" value="127.0.0.1"/>
+        <property name="port" value="6379"/>
+    </bean>
+    <!--指定缓存数据源配置-->
+    <bean class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" id="jedisConnectionFactory">
+        <constructor-arg ref="standaloneConfiguration" name="standaloneConfig"/>
+    </bean>
+
+    <!--操作redis缓存的模板对象-->
+    <bean class="org.springframework.data.redis.core.RedisTemplate" id="redisTemplate">
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+    </bean>
+
+</beans>

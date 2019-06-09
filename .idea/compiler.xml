@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="testAOP" />
+        <module name="testDesign" />
+        <module name="testJsp" />
+        <module name="testMq" />
+        <module name="testMVC" />
+        <module name="testRedis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tensquare_common" target="1.8" />
+      <module name="tensquare_parent" target="1.8" />
+      <module name="testAOP" target="1.8" />
+      <module name="testDesign" target="1.8" />
+      <module name="testJsp" target="1.8" />
+      <module name="testMq" target="1.8" />
+      <module name="testMVC" target="1.8" />
+      <module name="testRedis" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
